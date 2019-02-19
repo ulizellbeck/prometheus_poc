@@ -1,0 +1,5 @@
+groups:
+- name: status_application_1
+  rules:
+   - record: job:status_application_1:3m
+     expr: sum(min_over_time(application_1[3m]) or up * 0)
